@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# THE FESTIVAL OF FLAWLESS VICTORY
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projects are easy to start, but sometimes hard to finish. They are the green vegetables of the mind.
 
-## Available Scripts
+## The Eternal Rules of the Eternal Festival
 
-In the project directory, you can run:
+Here's the eightfold path to achieving Flawless Victory:
 
-### `npm start`
+1. Name your unfinished business.
+2. Pick a reasonable deadline for finishing it.
+3. Laugh loudly and arrogantly. HA HA HA! This is not optional.
+4. Pick a ridiculous deadline that is very imminent instead. One that makes Goro wince with its harshness.
+5. FINISH HIM!
+6. Post a link to your project and gloat.
+7. The chair-in-exile will declare your Flawless Victory and award prizes.
+8. Rinse and repeat, until the festival expires. I will suddenly close it with no warning, YOU FOOLS!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Example:
+1. A writeup of creating a backend API server with node/express and postgres
+2. By the end of this weekend
+3. HA HA HA!
+4. By midnight tonight
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## User Stories
 
-### `npm test`
+- [ ] As an unregistered user, I want to be able to create a new profile so that I can log in 
+- [ ] As a user, I want to be able to log in so that I can participate in the Festival
+- [ ] As a user, I want to be able to log out so that I can get on with my life
+- [ ] As a user, I want to be able to see a profile page so I can see my user info and current projects
+- [ ] As a user, I want to be able to create a new project with a name, reasonable deadline, and ridiculous deadline so that I can work towards completing it
+- [ ] As a user, I want to be able to mark a project complete so that I can win the Festival and get a prize
+- [ ] As a user, I want to be able to see the current status of a project so that I can see what I'm working on and how much time I have left to complete the task
+- [ ] As a user, I want to be able to see a list of other users' current projects so that I can see what other people are working on 
+- [ ] As a user, I want to be able to mark a project public or private so that I can display my greatness or hide my shame
+- [ ] As a user, I want to be able to like or comment on other users' projects so that I can encourage them to complete them
+- [ ] As a user, I want to be able to see a list of projects that I've liked, so that I can see a list of projects that I'm interested in
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Models
 
-### `npm run build`
+- User
+  - Username
+  - Name
+  - Photo URL
+  - Has many Projects
+  - Has many Comments
+  - Has many Likes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Project
+  - Title
+  - Description
+  - Reasonable Deadline
+  - Ridiculous Deadline
+  - Completed?
+  - Belongs to User
+  - Has many Comments
+  - Has many Likes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Comment
+  - Text
+  - Belongs to User
+  - Belongs to Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Like
+  - Belongs to User
+  - Belongs to Project
+  - (a user can only like a project once)
