@@ -40,6 +40,7 @@ Example:
 - User
   - Username
   - Name
+  - Password Digest
   - Photo URL
   - Has many Projects
   - Has many Comments
